@@ -41,9 +41,10 @@ function App() {
   return (
     <div className="App">
       <div className="activeTodos todos_section">
-        <div class="center">
+        <p className="title">
+          <i class="far fa-calendar-alt"></i>
           {today()}, {todayDate()}
-        </div>
+        </p>
         <form onSubmit={handleInputSubmit}>
           <input
             type="text"
@@ -92,7 +93,9 @@ function App() {
         </div>
       </div>
       <div className="completedTodos todos_section">
-        <p className="title">Completed</p>
+        <p className="title">
+          <i class="fas fa-check-circle"></i> Done
+        </p>
         <div className="todos">
           {activeTodo.map((data, key) => {
             if (data.status) {
@@ -139,7 +142,9 @@ function App() {
         </div>
       </div>
       <div className="deletedTodos todos_section">
-        <p className="title">Removed</p>
+        <p className="title">
+          <i class="fas fa-trash"></i> Removed
+        </p>
         <div className="todos">
           {deletedTodo.map((data, key) => {
             return (
